@@ -7,9 +7,9 @@ annotate_root_dir = "annotations"
 image_root_dir = "images"
 
 itemList = []
-for ip, ap in zip(os.listdir(os.path.join(data_root_dir, image_root_dir)), os.listdir(
-        os.path.join(data_root_dir, annotate_root_dir))):
-    print(ap)
+for ip in os.listdir(os.path.join(data_root_dir, image_root_dir)):
+    ap = ip.replace("jpg","xml")
+    print(ip+" "+ap)
     itemList.append((os.path.join(data_root_dir, image_root_dir, ip), os.path.join(data_root_dir, annotate_root_dir, ap)))
 
 ratio = 0.9

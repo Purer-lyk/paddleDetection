@@ -76,7 +76,7 @@ class BboxError(ValueError):
 class ImageError(ValueError):
     pass
 
-
+# 所有数据预处理编码的基类
 class BaseOperator(object):
     def __init__(self, name=None):
         if name is None:

@@ -219,6 +219,7 @@ class ImageFolder(DetDataset):
         records = []
         anno_file = self.get_anno()
         coco = COCO(anno_file)
+        # voc =
         for image in images:
             assert image != '' and os.path.isfile(image), \
                     "Image {} not found".format(image)

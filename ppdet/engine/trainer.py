@@ -156,7 +156,7 @@ class Trainer(object):
             self.model = self.reset_norm_param_attr(
                 self.model, weight_attr=None, bias_attr=None)
 
-        # normalize params for deploy
+        # normalize params for deploy.这里只有normalize一个预处理
         if 'slim' in cfg and cfg['slim_type'] == 'OFA':
             self.model.model.load_meanstd(cfg['TestReader'][
                 'sample_transforms'])
@@ -371,6 +371,7 @@ class Trainer(object):
                     save_prediction_only=save_prediction_only,
                     imid2path=imid2path)
             ]
+        # 影响eval评估的输出
         elif self.cfg.metric == 'VOC':
             output_eval = self.cfg['output_eval'] \
                 if 'output_eval' in self.cfg else None

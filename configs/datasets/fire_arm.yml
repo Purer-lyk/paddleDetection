@@ -1,4 +1,4 @@
-metric: FIREARM
+metric: VOC
 map_type: 11point
 num_classes: 1
 
@@ -18,4 +18,6 @@ EvalDataset:
 
 TestDataset:
   name: ImageFolder
-  anno_path: dataset/fire/label_list.txt
+  anno_path: dataset/fire/label_list.txt  #voc格式无法进行测试，infer.py必须要解析json
+#  anno_path: annotations/instances_val2017.json # also support txt (like VOC's label_list.txt)
+#  dataset_dir: dataset/fire # if set, anno_path will be 'dataset_dir/anno_path'
