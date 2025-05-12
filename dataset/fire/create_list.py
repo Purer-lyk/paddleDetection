@@ -8,9 +8,10 @@ image_root_dir = "images"
 
 itemList = []
 for ip in os.listdir(os.path.join(data_root_dir, image_root_dir)):
-    ap = ip.replace("jpg","xml")
-    print(ip+" "+ap)
-    itemList.append((os.path.join(data_root_dir, image_root_dir, ip), os.path.join(data_root_dir, annotate_root_dir, ap)))
+    ap = ip.replace("jpg", "xml")
+    print(ip + " " + ap)
+    itemList.append(
+        (os.path.join(data_root_dir, image_root_dir, ip), os.path.join(data_root_dir, annotate_root_dir, ap)))
 
 ratio = 0.9
 random.shuffle(itemList)

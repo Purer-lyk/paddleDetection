@@ -1194,6 +1194,7 @@ class Trainer(object):
                 outs = self.model.modelTeacher(data)
             else:
                 outs = self.model(data)
+            print(outs)
             for _m in metrics:
                 _m.update(data, outs)
 

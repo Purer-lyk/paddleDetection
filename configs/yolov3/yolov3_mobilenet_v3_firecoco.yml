@@ -1,7 +1,7 @@
 _BASE_: [
   '../datasets/fire_coco.yml',
   '../runtime.yml',
-  '_base_/optimizer_270e.yml',
+  '_base_/optimizer_300e.yml',
   '_base_/yolov3_mobilenet_v3_large.yml',
   '_base_/yolov3_reader.yml',
 ]

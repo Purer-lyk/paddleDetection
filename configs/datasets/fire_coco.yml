@@ -7,6 +7,8 @@ TrainDataset:
   anno_path: annotations/fire_train.json
   dataset_dir: dataset/firecoco
   data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+  allow_empty: true
+  empty_ratio: 0.1
 
 EvalDataset:
   name: COCODataSet

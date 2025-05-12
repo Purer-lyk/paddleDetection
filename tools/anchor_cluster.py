@@ -31,7 +31,7 @@ from tqdm import tqdm
 
 from ppdet.utils.cli import ArgsParser
 from ppdet.utils.check import check_gpu, check_version, check_config
-from ppdet.core.workspace import load_config, merge_config
+from ppdet.core.workspace import load_config, merge_config, create
 
 
 class BaseAnchorCluster(object):
@@ -219,10 +219,13 @@ def main():
         cfg.use_gpu = False
     check_gpu(cfg.use_gpu)
     # check if paddlepaddle version is satisfied
-    check_version('develop')
+    # check_version('develop')
+    check_version()
 
     # get dataset
-    dataset = cfg['TrainDataset']
+    # dataset = cfg['TrainDataset']
+    dataset = create('TrainDataset')()
+    print(dataset)
     if FLAGS.size:
         if ',' in FLAGS.size:
             size = list(map(int, FLAGS.size.split(',')))

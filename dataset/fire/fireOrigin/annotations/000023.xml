@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><annotation>
+	<folder>forest_fire</folder>
+	<filename>000023.jpg</filename>
+	<path>/home/aistudio/dataset/JPEGImages/000023.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1080</width>
+		<height>813</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>361</xmin>
+			<ymin>257</ymin>
+			<xmax>483</xmax>
+			<ymax>318</ymax>
+		</bndbox>
+	</object>
+</annotation>
